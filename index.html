@@ -66,10 +66,10 @@
   <h1>Split Expenses</h1>
   <div class="container">
     <label for="kuldeep">Kuldeep's Expense (₹):</label>
-    <input type="number" id="kuldeep" value="00.00" />
+    <input type="number" id="kuldeep" value="0" />
 
     <label for="tanishq">Tanishq's Expense (₹):</label>
-    <input type="number" id="tanishq" value="00.00" />
+    <input type="number" id="tanishq" value="0" />
 
     <button onclick="calculate()">Calculate Balance</button>
 
@@ -78,8 +78,8 @@
 
   <script>
     function calculate() {
-      const kuldeep = parseFloat(document.getElementById("kuldeep").value);
-      const tanishq = parseFloat(document.getElementById("tanishq").value);
+      const kuldeep = parseFloat(document.getElementById("kuldeep").value) || 0;
+      const tanishq = parseFloat(document.getElementById("tanishq").value) || 0;
       const total = kuldeep + tanishq;
       const share = total / 2;
 
